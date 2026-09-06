@@ -30,12 +30,12 @@
 ## روابط الحصص (كل حصة لينك منفصل)
 بفضل استخدام **HashRouter**، كل حصة لها رابط مستقل يمكن مشاركته مباشرة مع الطلاب:
 ```
-[https://your-username.github.io/your-repo-name/#/session/01](https://kidscodinghub.github.io./#/session/01)
-[https://your-username.github.io/your-repo-name/#/session/02](https://kidscodinghub.github.io./#/session/02)
-[https://your-username.github.io/your-repo-name/#/session/03](https://kidscodinghub.github.io./#/session/03)
-[https://your-username.github.io/your-repo-name/#/session/04](https://kidscodinghub.github.io./#/session/04)
-[ttps://your-username.ghithub.io/your-repo-name/#/session/05](https://kidscodinghub.github.io./#/session/05)
-[https://your-username.github.io/your-repo-name/#/session/06](https://kidscodinghub.github.io./#/session/06)
+(https://kidscodinghub.github.io./#/session/01)
+(https://kidscodinghub.github.io./#/session/02)
+(https://kidscodinghub.github.io./#/session/03)
+(https://kidscodinghub.github.io./#/session/04)
+(https://kidscodinghub.github.io./#/session/05)
+(https://kidscodinghub.github.io./#/session/06)
 ```
 ---
 ## مميزات المنصة
