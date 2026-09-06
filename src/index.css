@@ -1,0 +1,165 @@
+@import "tailwindcss";
+
+@theme {
+  --color-navy: #0A1729;
+  --color-royal: #0060F0;
+  --color-orange: #F04800;
+  --color-gold: #F0A800;
+  --color-card: #16305A;
+  --color-mint: #2DD4A0;
+  --color-lavender: #9AA5F0;
+  --color-success: #27C93F;
+  --color-danger: #E53E3E;
+}
+
+:root {
+  --navy: #0A1729;
+  --royal: #0060F0;
+  --orange: #F04800;
+  --gold: #F0A800;
+  --card: #16305A;
+  --white: #FFFFFF;
+  --green: #27C93F;
+  --mint: #2DD4A0;
+  --lavender: #9AA5F0;
+  --danger: #E53E3E;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Cairo', 'Inter', sans-serif;
+  background-color: var(--navy);
+  color: var(--white);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.font-mono {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.font-en {
+  font-family: 'Poppins', 'Inter', sans-serif;
+}
+
+/* RTL code boxes */
+.code-box {
+  direction: ltr;
+  text-align: left;
+  unicode-bidi: embed;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(22, 48, 90, 0.5);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--royal);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3380f5;
+}
+
+/* Animations */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(0, 96, 240, 0.4); }
+  50% { box-shadow: 0 0 20px 4px rgba(0, 96, 240, 0.2); }
+}
+
+@keyframes slide-up {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+.animate-slide-up {
+  animation: slide-up 0.4s ease-out;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Glass/card */
+.glass-card {
+  background: linear-gradient(145deg, rgba(22, 48, 90, 0.9), rgba(10, 23, 41, 0.95));
+  border: 1px solid rgba(0, 96, 240, 0.2);
+  backdrop-filter: blur(10px);
+}
+
+/* Stars background */
+.stars-bg {
+  background-image: radial-gradient(2px 2px at 20px 30px, rgba(255,255,255,0.15), transparent),
+                    radial-gradient(2px 2px at 40px 70px, rgba(255,255,255,0.1), transparent),
+                    radial-gradient(1px 1px at 90px 40px, rgba(255,255,255,0.12), transparent),
+                    radial-gradient(2px 2px at 160px 120px, rgba(255,255,255,0.08), transparent),
+                    radial-gradient(1px 1px at 230px 80px, rgba(255,255,255,0.1), transparent);
+  background-size: 250px 250px;
+}
+
+/* Focus styles */
+button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visible {
+  outline: 2px solid var(--royal);
+  outline-offset: 2px;
+}
+
+/* Code display */
+pre, code {
+  font-family: 'JetBrains Mono', monospace;
+  direction: ltr;
+  text-align: left;
+}
+
+/* Print styles for report */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  body {
+    background: white !important;
+    color: black !important;
+  }
+  .print-card {
+    border: 1px solid #ccc !important;
+    background: white !important;
+    color: black !important;
+  }
+}
